@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var fs = require('fs');
 
-
 var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
 var articlesRouter = require('./routes/articles');
@@ -23,6 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('combined',{ stream: accessLogStream }));
+// app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false
