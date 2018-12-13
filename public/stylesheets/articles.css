@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+a {
+    color: #00B7FF;
+}
+
+nav {
+    /* position: fixed; */
+    padding-left: 7%;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    /* background-color: #181d23; */
+    color: aliceblue;
+}
+
+nav a {
+    cursor: pointer;
+    font-size: 16px;
+    color: #181d23;
+    text-decoration: none;
+}
+
+nav a i {
+    color: #181d23;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+main {
+    padding: 10px 7%;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.info {
+    color: rgb(150, 146, 146);
+}
+
+.info>span {
+    margin-right: 5px;
+}
+
+.info>span>i {
+    margin-right: 3px;
+}
+.info .love{
+    cursor: pointer;
+}
