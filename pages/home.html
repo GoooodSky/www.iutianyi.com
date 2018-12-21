@@ -1,0 +1,124 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Sky Liu的精神角落</title><style>body {
+        margin: 0;
+    }
+
+    #loading-wrapper {
+        background-color: #222;
+    }
+    .loading {
+        box-sizing: content-box;
+        position: relative;
+        margin: 0 auto;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        /* border: 3px solid red; */
+        border-right: 3px solid #f300b4;
+        border-left: 3px solid #f300b4;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        animation: rotate 2s linear infinite;
+    }
+
+    .loading:before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: 10px;
+        left: 10px;
+        /* margin: 0 auto; */
+        border-radius: 50%;
+        /* border: 3px solid blue; */
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
+        border-top: 3px solid #039be5;
+        border-bottom: 3px solid #039be5;
+        animation: rotate 1.5s linear infinite;
+    }
+
+    .loading:after {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        animation: scale 0.5s alternate infinite;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes scale {
+        0% {
+            transform: scale(1)
+        }
+
+        100% {
+            transform: scale(0.2)
+        }
+    }
+
+    .fadeOut {
+        position: absolute;
+        animation: fadeOut 0.5s;
+        animation-fill-mode: forwards;
+        -webkit-animation: fadeOut  0.5s;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+        from {
+            opcity: 1;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        to {
+            opacity: 0;
+            width: 0;
+            z-index: -9999;
+        }
+    }
+
+    @-webkit-keyframes fadeOut {
+        from {
+          position: absolute;
+            opcity: 1;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        to {
+          position: absolute;
+            opacity: 0;
+            width: 0;
+            z-index: -9999;
+        }
+    }</style><script>var clientHeight = document.documentElement.clientHeight
+    var paddingTop = (clientHeight - 100) / 2
+    var loadingDom = '<div id="loading-wrapper" style="height:' + clientHeight + 'px;padding-top:' + paddingTop +
+        'px;"><div class="loading"></div></div>'
+    document.write(loadingDom)
+    //监听加载状态改变  
+    document.onreadystatechange = completeLoading
+    function completeLoading() {
+        /* interactive - 已加载，文档与用户可以开始交互,
+        比complete要早，不影响主页加载动画的显示 */
+        if (document.readyState == "interactive") {
+            var loading = document.getElementById("loading-wrapper")
+            loading.classList.add('fadeOut')
+        }
+    }</script><link rel=icon href=images/logo.ico type=image/x-icon><link href=https://use.fontawesome.com/releases/v5.4.1/css/all.css rel=stylesheet><link href=https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css rel=stylesheet><link href=/assets/home/css/app.0ba165aeb5dbff92e7b37d4613b8ac6b.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/assets/home/js/manifest.fbf82d1779c6d749b065.js></script><script type=text/javascript src=/assets/home/js/vendor.182d4e56d38b51b099d6.js></script><script type=text/javascript src=/assets/home/js/app.dff58fe4c3986f82171e.js></script></body></html>
