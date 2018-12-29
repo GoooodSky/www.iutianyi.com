@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "https": "node ./bin/https.js",
     "serve": "supervisor ./bin/www"
   },
   "dependencies": {
@@ -14,11 +15,15 @@
     "express": "~4.16.0",
     "express-session": "^1.15.6",
     "front-matter": "^3.0.1",
+    "greenlock-express": "^2.6.7",
     "highlight.js": "^9.13.1",
     "http-errors": "~1.6.2",
     "markdown": "^0.5.0",
     "marked": "^0.5.1",
     "mongoose": "^5.3.11",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "redirect-https": "^1.3.0",
+    "spdy": "^4.0.0",
+    "ursa-optional": "^0.9.10"
   }
 }
