@@ -47,7 +47,7 @@ router.get('/api/getArticleList', function (req, res) {
     if (tagName == '全部') {
         tagName = /^./
     }
-    
+     
     artilcesModel
         .find({
             tag: tagName,
@@ -65,12 +65,12 @@ router.get('/api/getArticleList', function (req, res) {
                 .exec(function (err, articleUnpinned) {
                     if (err) return console.error(err);
 
-                    var initalArticlesList = articlePinned.concat(articleUnpinned)
-                    var initalArticlesListLength = initalArticlesList.length
+                    var initalArticleList = articlePinned.concat(articleUnpinned)
+                    var initalArticleListLength = initalArticleList.length
 
                     var start = currentPage
                     var end = start + articlesPerPage
-                    var articlesList = initalArticlesList.slice(start, end)
+                    var articlesList = initalArticleList.slice(start, end)
                     articlesList = articlesList.map(function (e) {
                         e.content = marked(e.content)
                         return e
@@ -78,7 +78,7 @@ router.get('/api/getArticleList', function (req, res) {
                     // console.log(articlesList)
                     res.send({
                         articlesList,
-                        initalArticlesListLength
+                        initalArticleListLength
                     })
                 })
         })
